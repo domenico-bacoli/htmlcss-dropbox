@@ -14,6 +14,13 @@ body{
     margin-right: auto;
 }
 
+.section-main-centered{
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 .btn-primary button{
     background-color: rgb(0, 97, 251);
     color: white;
@@ -23,12 +30,14 @@ body{
 
 /* general */
 
+/* Start HEADER */
 header{
     background-color: rgb(179, 208, 230);
     height: 490px;
+    padding-bottom: 60px;
 }
 
-
+/* start navbar */
 nav{
     display: flex;
     background-color: white;
@@ -65,7 +74,11 @@ nav .nav-inner .link ul a{
     font-size: 12px;
     text-decoration: none;
 }
+/* End Navbar */
 
+
+
+/* start Jumbotron */
 header .header-jumbo{
     display: flex;
     flex-direction: column;
@@ -113,3 +126,195 @@ header .header-jumbo .jumbo-side .left-side .arrow-down i{
     font-size: 30px;
     font-weight: bold;
 }
+/* End Jumbotron */
+
+
+/* start Main */
+
+main{
+    padding-top: 100px;
+}
+
+main .section-title{
+    padding-bottom: 30px;
+}
+
+main .choose-billing{
+    padding-bottom: 30px;
+}
+
+main .row{
+    display: flex;
+    gap: 40px;
+}
+
+main .row .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    width: calc(100% / 3);
+    gap: 20px;
+    border: 2px solid rgb(209, 209, 209);
+    padding: 0 14px 40px;
+    margin-bottom: 40px;
+    
+
+    /* test */ 
+}
+
+main .row .col .col-row-up .col-title{
+    border-bottom: 1px solid rgb(209, 209, 209);
+    padding: 6px 0;
+
+}
+
+main .row .col .col-row-center{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .row .col .col-row-center .col-row-center-up{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+main .row .col .col-row-center .col-row-center-up .billing-price,
+main .row .col .col-row-center .col-row-center-up .billing-price-interval{
+    font-size: 12px;
+}
+
+main .row .col .col-row-center .col-row-center-up .billing-price-interval{
+    color: rgb(151, 151, 151);
+}
+
+
+main .row .col .col-row-center .col-row-center-down{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+hr{
+    width: 20%;
+    height: 1px solid rgb(206, 206, 206);
+}
+
+main .row .col .col-row-down{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .row .col .col-row-center-down .content,
+main .row .col .col-row-down .content{
+    display: flex;
+    font-size: 10px;
+    gap: 6px;
+}
+
+main .row-2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid rgb(209, 209, 209);
+    margin-bottom: 120px;
+}
+
+.row-2-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 14px 24px;
+    
+}
+
+main .row-2 .row-title{
+    border-bottom: 1px solid rgb(209, 209, 209);
+    padding: 6px 0;
+    text-align: center;
+}
+
+main .row-2 .contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .row-2 .contact:last-of-type{
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+/* section Partner Contact */
+
+main .partner-contact {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+main .partner-contact .image{
+
+    /* test */
+    background-color: gray;
+    height: 200px;
+    width: 300px;
+}
+
+main .dropbox-business-operation{
+    display: flex;
+    flex-direction: column;
+}
+
+main .dropbox-business-operation .card-row{
+    display: flex;
+    width: calc(100% / 3);
+    gap: 20px;
+    padding: 30px 0;
+}
+
+main .dropbox-business-operation .card-image{
+    /* test */
+    background-color: gray;
+    height: 100px;
+    width: 160px;
+}
+
+main .dropbox-business-operation .card-row .card .card-details .card-details-title{
+    padding: 20px 0;
+}
+
+.company-customers h3{
+    padding: 80px 0 40px;
+}
+
+.customers-logo{
+    display: flex;
+    border: 1px solid red;
+    width: calc(100% / 3);
+}
+
+.customers-logo .row-left{
+    border: 1px solid red;
+}
+
+.customers-logo .row-left .col-logo,
+.customers-logo .row-right .col-logo{
+    border: 1px solid blue;
+    background-color: gray;
+    height: 100px;
+    width: 100px;
+}
+
+.customers-logo .col-logo-large{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+
+
+
