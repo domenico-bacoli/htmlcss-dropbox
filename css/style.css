@@ -39,6 +39,8 @@ header{
 nav{
     display: flex;
     background-color: white;
+    position: fixed;
+    width: 100%;
 }
 
 nav .nav-inner{
@@ -64,7 +66,7 @@ nav .nav-inner .link{
 nav .nav-inner .link ul{
     display: flex;
     list-style-type: none;
-    gap: 20px;
+    gap: 40px;
 }
 
 nav .nav-inner .link ul a{
@@ -72,15 +74,15 @@ nav .nav-inner .link ul a{
     font-size: 12px;
     text-decoration: none;
 }
-/* End Navbar */
 
+/* End Navbar */
 
 
 /* start Jumbotron */
 header .header-jumbo{
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 120px;
     gap: 40px;
 }
 
@@ -153,22 +155,32 @@ main .row .col{
     align-items: center;
     justify-content: stretch;
     width: calc(100% / 3);
-    gap: 20px;
+    /* gap: 20px; */
     border: 2px solid rgb(209, 209, 209);
-    padding: 0 14px 40px;
+    padding: 0 0 40px;
     margin-bottom: 40px;
 }
 
 main .row .col .col-row-up .col-title{
-    border-bottom: 1px solid rgb(209, 209, 209);
+    /* border-bottom: 1px solid rgb(209, 209, 209); */
     padding: 6px 0;
+}
 
+main .row .col hr{
+    width: 100%;
+    border: 1px solid rgb(209, 209, 209);
+    margin-bottom: 20px;
+}
+
+main .row .col hr:last-child{
+    width: 20%;
 }
 
 main .row .col .col-row-center{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 0 14px 0;
 }
 
 main .row .col .col-row-center .col-row-center-up{
@@ -372,11 +384,11 @@ main .customers-logo .customers-logo-row .customers-logo-left .logo-square:nth-c
 main .customers-logo .customers-logo-row .customers-logo-center{
     background-color: rgb(245, 245, 245);
     width: calc(100% / 3);
-    padding: 30px 30px 0;
+    padding: 36px 36px 0;
 }
 
 main .customers-logo .customers-logo-row .customers-logo-center .logo-center img{
-    width: 60%;
+    width: 55%;
 }
 
 .customers-logo hr{
@@ -455,11 +467,11 @@ main .customers-questions .questions-content .questions-content-text p{
 .content-hidden{
     padding: 10px 0;
     font-weight: 400;
-    display: none;
+    display: none;   
 }
 
 .questions-content:hover .content-hidden{
-    display: block;
+    display: block; 
 }
 
 main .customers-questions .questions-content .questions-content-expand{
@@ -517,10 +529,15 @@ footer .footer-row-down{
 footer .footer-row-down .languages {
     color: gray;
     font-size: 12px;
+    cursor: pointer;
 }
 
 footer .footer-row-down .languages i{
     padding-right: 8px;
+}
+
+footer a:hover{
+    text-decoration: underline;
 }
 /* end Footer */
 
