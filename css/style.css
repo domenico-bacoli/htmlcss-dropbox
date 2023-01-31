@@ -8,7 +8,8 @@ body{
     font-family: sans-serif;
 }
 
-.header-centered{
+.header-centered,
+.footer-centered{
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -266,13 +267,18 @@ main .partner-contact .image{
 main .dropbox-business-operation{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 main .dropbox-business-operation .card-row{
     display: flex;
-    width: calc(100% / 3);
-    gap: 20px;
+    width: 100%;
+    gap: 30px;
     padding: 30px 0;
+}
+
+main .dropbox-business-operation .card-row .card{
+    width: calc(100% / 3);
 }
 
 main .dropbox-business-operation .card-image{
@@ -290,30 +296,118 @@ main .dropbox-business-operation .card-row .card .card-details .card-details-tit
     padding: 80px 0 40px;
 }
 
+/* START CUSTOMERS LOGO */
+
 .customers-logo{
     display: flex;
     border: 1px solid red;
-    width: calc(100% / 3);
+    width: 100%;
+
+    /* test */
+    margin-top: 80px;
+    margin-bottom: 100px;
+
 }
 
-.customers-logo .row-left{
-    border: 1px solid red;
+.customers-logo-col-left,
+.customers-logo-col-right{
+    max-width: 25%;
 }
 
-.customers-logo .row-left .col-logo,
-.customers-logo .row-right .col-logo{
-    border: 1px solid blue;
+.customers-logo-col{
+    display: flex;
+}
+
+.customers-logo-row{
+    display: flex;  
     background-color: gray;
-    height: 100px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
     width: 100px;
+    height: 100px;
+    
 }
 
-.customers-logo .col-logo-large{
-    width: 200px;
-    height: 200px;
+.logo-blue{
+    background-color: blue;
 }
 
+.customers-logo-col-center{
+    display: flex;
+    flex-grow: 2;
+    background-color: rgb(155, 53, 53);
+}
+/* END CUSTOMERS LOGO  */
 
+/* start Customers Questions */
+
+main .customers-questions{
+    display: flex;
+    flex-direction: column;
+}
+
+main .customers-questions h2{
+    padding-bottom: 40px;
+}
+
+main .customers-questions .questions-content{
+    display: flex;
+    flex-direction: column;
+    
+    /* test */
+    border-top: 2px solid gray;
+    width: 600px;
+    padding: 40px 0;
+}
+
+main .customers-questions .questions-content:last-child{
+
+    /* test */
+    border-bottom: 2px solid gray;
+
+}
+/* end Customers Questions */
+
+/* start Footer */
+
+footer{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+
+    /* test */
+    background-color: black;
+    height: 500px;
+}
+
+footer a,
+footer li{
+    color: white;
+}
+
+footer .footer-row{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+footer .footer-col{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .footer-col ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+}
+
+/* end Footer */
 
 
 
