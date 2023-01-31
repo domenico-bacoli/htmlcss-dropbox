@@ -8,8 +8,9 @@ body{
     font-family: sans-serif;
 }
 
-.header-centered{
-    max-width: 1000px;
+.header-centered,
+.footer-centered{
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -19,13 +20,6 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
-
-.footer-centered{
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 
 .btn-primary button{
     background-color: rgb(0, 97, 251);
@@ -39,8 +33,6 @@ body{
 /* Start HEADER */
 header{
     background-color: rgb(179, 208, 230);
-    height: 490px;
-    padding-bottom: 60px;
 }
 
 /* start navbar */
@@ -89,7 +81,7 @@ header .header-jumbo{
     display: flex;
     flex-direction: column;
     padding-top: 50px;
-    gap: 30px;
+    gap: 20px;
 }
 
 header .header-jumbo .jumbo-title{
@@ -120,12 +112,16 @@ header .header-jumbo .jumbo-content .jumbo-side .left-side .undo-text{
     color: rgb(85, 85, 85);
 }
 
+header .header-jumbo .jumbo-side .right-side{
+}
+
 header .header-jumbo .jumbo-side .right-side img{
     width: 100%;
+    margin-bottom: -50px;
 }
 
 header .header-jumbo .jumbo-side .left-side .arrow-down{
-    padding-top: 26px;
+    padding-top: 60px;
 }
 
 header .header-jumbo .jumbo-side .left-side .arrow-down i{
@@ -392,7 +388,7 @@ footer .footer-row-up .footer-col li:first-child{
 footer .footer-row-up{
     display: flex;
     padding: 60px 0;
-    gap: 120px;
+    gap: 100px;
 }
 
 footer .footer-row-up .footer-col{
