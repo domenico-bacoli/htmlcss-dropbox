@@ -8,15 +8,20 @@ body{
     font-family: sans-serif;
 }
 
-.header-centered,
-.footer-centered{
-    max-width: 800px;
+.header-centered{
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .section-main-centered{
-    max-width: 650px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-centered{
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -300,46 +305,37 @@ main .dropbox-business-operation .card-row .card .card-details .card-details-tit
 
 .customers-logo{
     display: flex;
-    border: 1px solid red;
-    width: 100%;
-
     /* test */
     margin-top: 80px;
     margin-bottom: 100px;
-
 }
 
-.customers-logo-col-left,
-.customers-logo-col-right{
-    max-width: 25%;
-}
+main .customers-logo .customers-logo-left,
+main .customers-logo .customers-logo-right{
+    background-color: green;
+    /* test */
 
-.customers-logo-col{
     display: flex;
+    flex-flow: wrap;
+    width: calc(100vw / 3);
+    height: calc(100vw / 3);
 }
 
-.customers-logo-row{
-    display: flex;  
-    background-color: gray;
+main .customers-logo .logo-square{
+    width: 50%;
+    height: 50%;
+    border: 1px solid blue;
 }
 
-.logo{
-    display: flex;
-    flex-direction: column;
-    width: 100px;
-    height: 100px;
-    
+main .customers-logo .customers-logo-center{
+    flex-grow: 1;
+    border: 1px solid black;
 }
 
-.logo-blue{
-    background-color: blue;
+main .customers-logo .customers-logo-right{
+    background-color: red;
 }
 
-.customers-logo-col-center{
-    display: flex;
-    flex-grow: 2;
-    background-color: rgb(155, 53, 53);
-}
 /* END CUSTOMERS LOGO  */
 
 /* start Customers Questions */
@@ -359,7 +355,7 @@ main .customers-questions .questions-content{
     
     /* test */
     border-top: 2px solid gray;
-    width: 600px;
+    width: 400px;
     padding: 40px 0;
 }
 
@@ -371,42 +367,63 @@ main .customers-questions .questions-content:last-child{
 }
 /* end Customers Questions */
 
-/* start Footer */
 
+
+/* start Footer */
 footer{
     display: flex;
-    align-items: center;
     margin-top: 100px;
-
-    /* test */
     background-color: black;
-    height: 500px;
+    
 }
 
 footer a,
 footer li{
     color: white;
+    text-decoration: none;
+    font-size: 10px;
 }
 
-footer .footer-row{
+footer .footer-row-up .footer-col li:first-child{
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+footer .footer-row-up{
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    padding: 60px 0;
+    gap: 120px;
 }
 
-footer .footer-col{
+footer .footer-row-up .footer-col{
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 footer .footer-col ul{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     list-style-type: none;
 }
 
+footer hr{
+    width: 10%;
+    border: 1px solid gray;
+}
+
+footer .footer-row-down{
+    padding: 30px 0;
+}
+
+footer .footer-row-down .languages {
+    color: gray;
+    font-size: 12px;
+}
+
+footer .footer-row-down .languages i{
+    padding-right: 8px;
+}
 /* end Footer */
 
 
