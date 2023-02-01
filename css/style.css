@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Open Sans', sans-serif;
 }
@@ -153,11 +157,17 @@ header .header-jumbo .jumbo-side .left-side .arrow-down{
     padding-top: 50px;
 }
 
+header .header-jumbo .jumbo-side .left-side .arrow-down a{
+    color: black;
+}
+
 header .header-jumbo .jumbo-side .left-side .arrow-down i{
     font-size: 36px;
     font-weight: bold;
     cursor: pointer;
 }
+
+
 /* End Jumbotron */
 
 /* start Main */
