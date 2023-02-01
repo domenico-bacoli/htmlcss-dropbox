@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .header-centered,
@@ -16,7 +16,7 @@ body{
 }
 
 .section-main-centered{
-    max-width: 700px;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -26,11 +26,21 @@ body{
     color: white;
     border: none;
     padding: 8px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
+.btn-primary button:hover{
+    background-color:rgba(0, 97, 251, 0.7);
+}
+
+.btn-secondary button{
+    cursor: pointer;
+}
 /* general */
 
-/* Start HEADER */
+/* start header */
 header{
     background-color: rgb(179, 208, 230);
 }
@@ -61,12 +71,28 @@ nav .nav-inner .link{
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    height: 100%;
+}
+
+nav .nav-inner .link .left-link,
+nav .nav-inner .link .left-link ul li a,
+nav .nav-inner .link .right-link,
+nav .nav-inner .link .right-link ul li a{
+    height: 100%;
+}
+
+.left-link ul li,
+.right-link ul li{
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 nav .nav-inner .link ul{
     display: flex;
     list-style-type: none;
     gap: 40px;
+    height: 100%;
 }
 
 nav .nav-inner .link ul a{
@@ -75,8 +101,11 @@ nav .nav-inner .link ul a{
     text-decoration: none;
 }
 
-/* End Navbar */
-
+.link ul li:hover{
+    border-bottom: 3px solid rgb(173, 173, 173);
+    border-top: 3px solid transparent;
+}
+/* end Navbar */
 
 /* start Jumbotron */
 header .header-jumbo{
@@ -86,8 +115,9 @@ header .header-jumbo{
     gap: 40px;
 }
 
-header .header-jumbo .jumbo-title{
-    font-size: 30px;
+header .header-jumbo .jumbo-title h1{
+    font-size: 52px;
+    font-weight: 800;
 }
 
 header .header-jumbo .jumbo-content .jumbo-side{
@@ -104,13 +134,13 @@ header .header-jumbo .left-side{
 
 header .header-jumbo .right-side{
     display: flex;  
-    max-width: 65%;
+    max-width: 70%;
 }
 
 header .header-jumbo .jumbo-content .jumbo-side .left-side .paragraph p,
 header .header-jumbo .jumbo-content .jumbo-side .left-side .undo-text{
-    font-size: 11px;
-    line-height: 1.3;
+    font-size: 12px;
+    line-height: 1.4;
     color: rgb(85, 85, 85);
 }
 
@@ -120,28 +150,53 @@ header .header-jumbo .jumbo-side .right-side img{
 }
 
 header .header-jumbo .jumbo-side .left-side .arrow-down{
-    padding-top: 60px;
+    padding-top: 50px;
 }
 
 header .header-jumbo .jumbo-side .left-side .arrow-down i{
-    font-size: 30px;
+    font-size: 36px;
     font-weight: bold;
+    cursor: pointer;
 }
 /* End Jumbotron */
-
 
 /* start Main */
 
 main{
-    padding-top: 100px;
+    margin-top: 110px;
 }
 
 main .section-title{
-    padding-bottom: 30px;
+    padding-bottom: 28px;
+}
+
+main .section-title h2{
+    font-size: 30px;
 }
 
 main .choose-billing{
-    padding-bottom: 30px;
+    display: flex;
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+    padding: 30px 0 40px;
+    gap: 4px;
+}
+main .choose-billing .circle-1, .circle-2{
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+}
+
+main .choose-billing span{
+    margin-right: 30px;
+}
+
+main .choose-billing .month .circle-1{
+    border: 4px solid rgb(53, 87, 255);
+}
+
+main .choose-billing .year .circle-2{
+    border: 2px solid rgb(215, 215, 215);
 }
 
 main .row{
@@ -155,33 +210,41 @@ main .row .col{
     align-items: center;
     justify-content: stretch;
     width: calc(100% / 3);
-    /* gap: 20px; */
-    border: 2px solid rgb(209, 209, 209);
+    border: 1px solid rgb(215, 215, 215);
     padding: 0 0 40px;
     margin-bottom: 40px;
 }
 
+main .row .col .col-row-up{
+    width: 100%;
+    text-align: center;
+}
+
 main .row .col .col-row-up .col-title{
-    /* border-bottom: 1px solid rgb(209, 209, 209); */
+    border-bottom: 1px solid rgb(215, 215, 215);
+    font-size: 11px;
     padding: 6px 0;
+    margin-bottom: 20px;
+    color: rgb(85, 85, 85);
 }
 
 main .row .col hr{
-    width: 100%;
-    border: 1px solid rgb(209, 209, 209);
-    margin-bottom: 20px;
-}
-
-main .row .col hr:last-child{
     width: 20%;
+    height: 1px;
+    border: 1px solid rgb(215, 215, 215);
 }
 
 main .row .col .col-row-center{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 0 14px 0;
+    gap: 30px;
+    padding: 0 18px 0;
 }
+
+main .row .col .col-row-center .btn-primary button{
+    width: 100%;
+}
+
 
 main .row .col .col-row-center .col-row-center-up{
     display: flex;
@@ -191,13 +254,12 @@ main .row .col .col-row-center .col-row-center-up{
 
 main .row .col .col-row-center .col-row-center-up .billing-price,
 main .row .col .col-row-center .col-row-center-up .billing-price-interval{
-    font-size: 12px;
+    font-size: 11px;
 }
 
 main .row .col .col-row-center .col-row-center-up .billing-price-interval{
     color: rgb(151, 151, 151);
 }
-
 
 main .row .col .col-row-center .col-row-center-down{
     display: flex;
@@ -205,62 +267,94 @@ main .row .col .col-row-center .col-row-center-down{
     gap: 20px;
 }
 
+main .row .col .col-row-center .col-row-center-down .link-buy-now{
+    font-size: 11px;
+}
+
+main .row .col .col-row-center .col-row-center-down .link-buy-now a{
+    padding-left: 4px;
+}
+
 hr{
     width: 20%;
-    height: 1px solid rgb(206, 206, 206);
+    height: 1px solid rgb(215, 215, 215);
 }
 
 main .row .col .col-row-down{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 20px 18px;
+}
+
+main .row .col .col-row-down-title strong{
+    font-size: 11px;
 }
 
 main .row .col .col-row-center-down .content,
 main .row .col .col-row-down .content{
     display: flex;
-    font-size: 10px;
+    font-size: 11px;
     gap: 6px;
+    color: rgb(75, 75, 75);
+}
+
+.fa-check{
+    color: rgb(0, 91, 251);
 }
 
 main .row-2{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: 2px solid rgb(209, 209, 209);
-    margin-bottom: 120px;
+    border: 1px solid rgb(215, 215, 215);
+    margin-bottom: 100px;
 }
 
-.row-2-content{
+.fa-building{
+    padding-right: 6px;
+}
+
+main .row-2 .row-2-content .row-2-content-left{
     display: flex;
     flex-direction: column;
-    gap: 30px;
     padding: 0 14px 24px;
-    
+}
+
+main .row-2 .row-2-content .row-2-content-left p{
+    font-size: 11px;
 }
 
 main .row-2 .row-title{
-    border-bottom: 1px solid rgb(209, 209, 209);
+    border-bottom: 1px solid rgb(215, 215, 215);
     padding: 6px 0;
     text-align: center;
+    font-size: 11px;
+    color: rgb(85, 85, 85);
 }
 
-main .row-2 .contact{
+main .row-2 .row-2-content{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-main .row-2 .contact:last-of-type{
-    padding-bottom: 0;
-    padding-top: 0;
+main .row-2 .row-2-content .row-2-content-left p{
+    padding: 6px 0;
 }
 
+main .row-2 .row-2-content .row-2-content-left p:last-child{
+    padding: 30px 0 0;
+    color: rgb(85, 85, 85);
+}
+
+main .row-2-content .row-2-content-right{
+    width: 30%;
+    padding: 0 18px;
+}
 /* Start section Partner Contact */
 
 main .partner-contact {
     display: flex;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     gap: 40px;
 }
 
@@ -281,14 +375,15 @@ main .partner-contact .partner-contact-right-side .right-side-title{
 }
 
 main .partner-contact .partner-contact-right-side p{
-    font-size: 13px;
+    font-size: 12px;
+    color: rgb(75, 75, 75);
     line-height: 1.3;
 }
 
 main .partner-contact .partner-contact-right-side .btn-secondary button{
     margin-top: 30px;
     padding: 6px 10px;
-    border: 1px solid gray;
+    border: 1px solid rgb(215, 215, 215);
     background-color: transparent;
 }
 /* End section Partner Contact */
@@ -298,6 +393,10 @@ main .dropbox-business-operation{
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+main .dropbox-business-operation h2{
+    font-size: 28px;
 }
 
 main .dropbox-business-operation .card-row{
@@ -324,23 +423,31 @@ main .dropbox-business-operation .card-row .card .card-details .card-details-tit
 }
 
 main .dropbox-business-operation .card-row .card .card-details .card-details-paragraph p{
-    font-size: 14px;
+    font-size: 12px;
+    color: rgb(75, 75, 75);
 }
 
 .company-customers h2{
     padding: 80px 0 40px;
+    font-size: 28px;
+    width: 60%;
+}
+
+.company-customers a{
+    font-size: 12px;
 }
 /* end section Business operation */
 
-/* START CUSTOMERS LOGO */
+/* start customers logo */
 
 main .customers-logo{
-    margin-top: 80px;
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 
 main .customers-logo .customers-logo-row{
     display: flex;
+    height: calc(100vw / 3);
 }
 
 main .customers-logo .customers-logo-row .customers-logo-left,
@@ -357,6 +464,7 @@ main .customers-logo .customers-logo-row .logo-square{
     align-items: center;
     width: 50%;
     height: 50%;
+    cursor: pointer;
 }
 
 main .customers-logo .customers-logo-row .logo-square img{
@@ -383,25 +491,26 @@ main .customers-logo .customers-logo-row .customers-logo-left .logo-square:nth-c
 
 main .customers-logo .customers-logo-row .customers-logo-center{
     background-color: rgb(245, 245, 245);
-    width: calc(100% / 3);
+    width: calc(100vw / 3);
     padding: 36px 36px 0;
+    overflow-y: auto;
 }
 
 main .customers-logo .customers-logo-row .customers-logo-center .logo-center img{
-    width: 55%;
+    width: 50%; 
+    margin-bottom: 30px;   
 }
 
 .customers-logo hr{
-    margin: 30px 0;
+    height: 2px;
+    border: 1px solid rgb(215, 215, 215);
 }
 
 main .customers-logo .customers-logo-row .customers-logo-center .logo-center-paragraph p{
+    margin-top: 30px;
     font-size: 12px;
-    padding-bottom: 30px;
-}
-
-main .customers-logo .customers-logo-row .customers-logo-center .paragraph-author p{
-    font-size: 12px;
+    padding-bottom: 40px;
+    color: rgb(85, 85, 85);
 }
 
 main .customers-logo .customers-logo-row .customers-logo-right .logo-square:nth-child(1){
@@ -431,15 +540,46 @@ main .customers-logo .customers-logo-row-down .free-trial-link{
     padding: 100px 0;
 }
 
+main .customers-logo .customers-logo-row-down .free-trial-link-title h2{
+    color: rgb(98, 8, 42);
+}
+
+
 main .customers-logo .customers-logo-row-down .free-trial-link .btn-secondary button{
     padding: 6px 10px;
-    border: 1px solid gray;
     background-color: white;
     border: none;
 }
 
+main .customers-logo .customers-logo-row .customers-logo-left .logo-square:nth-child(2):hover{
+    border: 12px solid rgb(158, 30, 79);
+}
 
-/* END CUSTOMERS LOGO  */
+main .customers-logo .customers-logo-row .customers-logo-left .logo-square:nth-child(3):hover{
+    border: 12px solid rgb(80, 190, 234);
+}
+
+main .customers-logo .customers-logo-row .customers-logo-left .logo-square:nth-child(4):hover{
+    border: 12px solid rgb(250, 101, 101);
+}
+
+main .customers-logo .customers-logo-row .customers-logo-right .logo-square:nth-child(1):hover{
+    border: 12px solid rgb(234, 66, 88);
+}
+
+main .customers-logo .customers-logo-row .customers-logo-right .logo-square:nth-child(2):hover{
+    border: 12px solid rgb(212, 224, 233);
+}
+
+main .customers-logo .customers-logo-row .customers-logo-right .logo-square:nth-child(3):hover{
+    border: 12px solid rgb(65, 87, 164);
+}
+
+main .customers-logo .customers-logo-row .customers-logo-right .logo-square:nth-child(4):hover{
+    border: 12px solid rgb(248, 231, 163);
+}
+/* end customers logo  */
+
 
 /* start Customers Questions */
 
@@ -456,17 +596,17 @@ main .customers-questions .questions-content{
 }
 
 main .customers-questions .questions-content:last-child{
-    border-bottom: 1px solid rgb(180, 180, 180);
+    border-bottom: 1px solid rgb(215, 215, 215);
 }
 
 main .customers-questions .questions-content .questions-content-text p{
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
+    color: rgb(75, 75, 75);
 }
 
 .content-hidden{
     padding: 10px 0;
-    font-weight: 400;
     display: none;   
 }
 
@@ -495,7 +635,7 @@ footer li{
 }
 
 footer .footer-row-up .footer-col li:first-child{
-    font-size: 14px;
+    font-size: 16px;
     padding-bottom: 10px;
 }
 
@@ -519,7 +659,7 @@ footer .footer-col ul{
 
 footer hr{
     width: 10%;
-    border: 1px solid gray;
+    border: 1px solid rgb(215, 215, 215);
 }
 
 footer .footer-row-down{
@@ -527,7 +667,7 @@ footer .footer-row-down{
 }
 
 footer .footer-row-down .languages {
-    color: gray;
+    color: rgb(215, 215, 215);
     font-size: 12px;
     cursor: pointer;
 }
